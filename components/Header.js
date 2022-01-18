@@ -1,9 +1,14 @@
 import React from 'react';
-
+import styles from '@/styles/Header.module.scss'
 const Header = () => {
     return (
-        <div>
-            <h1>Header</h1>
+        <div className={styles.header}>
+            <div className="title-box">
+                <h1>Next Movie App</h1>
+            </div>
+            <div className="search-box">
+                <input type="text"/>
+            </div>
         </div>
     );
 };
