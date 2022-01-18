@@ -8,17 +8,13 @@ import useSWR from 'swr';
 export default function Home({movies}) {
     const keyword = useSelector(getKeyword) ?? 'harry';
 
-    const {data} = useSWR(`http://www.omdbapi.com/?apikey=53c800d&s=${keyword}&type=movie`,async (url)=>{
-        const response = await fetch(url);
-        movies = await response.json();
-        return movies.Search;
-    });
+    const {data} = useSWR(`http://www.omdbapi.com/?apikey=53c800d&s=${keyword}&type=movie`);
 
     if(data){
         return (
             <div className={styles.main}>
                 {
-                    data.map(movie => {
+                    data.Search.map(movie => {
                         return (
                             <Link key={movie.imdbID} href={`/movies/${movie.imdbID}`}>
                                 <a>
