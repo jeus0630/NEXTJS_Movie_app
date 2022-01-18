@@ -17,7 +17,7 @@ export default function Home({movies}) {
                     data.Search?.map(movie => {
                         return (
                             <Link key={movie.imdbID} href={`/movies/${movie.imdbID}`}>
-                                <a>
+                                <a className={styles.link}>
                                     <img src={movie.Poster} alt=""/>
                                     <div>
                                         <em className={styles.txt_em}>{movie.Title}</em>
