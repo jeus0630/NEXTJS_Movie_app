@@ -14,7 +14,7 @@ export default function Home({movies}) {
         return (
             <div className={styles.main}>
                 {
-                    data.Search.map(movie => {
+                    data.Search?.map(movie => {
                         return (
                             <Link key={movie.imdbID} href={`/movies/${movie.imdbID}`}>
                                 <a>
