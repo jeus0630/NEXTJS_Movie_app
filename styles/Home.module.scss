@@ -1,0 +1,17 @@
+.main{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-row-gap: 50px;
+    padding: 50px 0;
+}
+
+.txt_em{
+    display: block;
+    padding-top: 5px;
+    font-weight: bold;
+}
+
+.txt_b{
+    display: block;
+    padding-top: 5px;
+}
